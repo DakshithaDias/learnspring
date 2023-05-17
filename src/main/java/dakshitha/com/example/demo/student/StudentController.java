@@ -15,7 +15,8 @@ public class StudentController {
 
     private final StudentService studentServ;
 
-    //private final StudentService stu2 = new StudentService();
+    private final StudentService stu2 = new StudentService();
+
 
     @Autowired
     public StudentController(StudentService studentService) {
@@ -24,7 +25,7 @@ public class StudentController {
     }
 
     @GetMapping("/details")
-    public List<Student> getStudentsasda(){
+    public List<Student> getStudents(){
         return studentServ.getStudents();
     }
 
@@ -32,5 +33,4 @@ public class StudentController {
     public String method1(){
         return studentServ.method();
     }
-
 }
